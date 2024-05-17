@@ -38,6 +38,7 @@ Then in a different terminal, run the following command:
 
 ``
 roslaunch cepton_ros demo.launch
+``
 
 ## Connecting LiDAR to computer:
 To conenct the LiDAR and make sure it can work without WiFi, the settings have to be edited.
