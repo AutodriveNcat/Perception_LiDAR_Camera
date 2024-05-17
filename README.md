@@ -1,9 +1,10 @@
 # Perception_LiDAR_Camera
-## To install LiDAR drivers do the following:
+## LiDAR drivers installation
+To install LiDAR drivers do the following:
 
 1- Make an empty foler and an emtpy src fodler inside of it.
 
-2- Inside the src folde, clone their repository using the following command:
+2- Inside the src folder, clone their repository using the following command:
 
 ``
 git clone https://github.com/ceptontech/cepton_sdk_redist.git
@@ -26,7 +27,8 @@ catkin_make
 7- Now you are ready to use the drivers.
 
 
-## To use the drivers and start getting data from the LiDAR, opena terminal and use the following commadn to start the ROS master:
+## Using the LiDAR
+To use the drivers and start getting data from the LiDAR, opena terminal and use the following commadn to start the ROS master:
 
 ``
 roscore
@@ -36,6 +38,20 @@ Then in a different terminal, run the following command:
 
 ``
 roslaunch cepton_ros demo.launch
+
+## Connecting LiDAR to computer:
+To conenct the LiDAR and make sure it can work without WiFi, the settings have to be edited.
+
+First open a terminal and use the following command:
+
 ``
+ifconfig
+``
+
+check the ip address and netmask for the respective ethernet port and save them.
+
+In the network setting, change the ipV4 settings for your respective ethernet port and make it manual. Put the ip address as 192.168.x.x with "x.x" being the second half of your own ip address. Also input the netmask as you saw it.
+
+Now the LiDAR should work without issues.
 
 Now you should be recieving the data from the LiDAR
